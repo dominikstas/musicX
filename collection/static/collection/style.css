@@ -12,7 +12,6 @@ body {
 .nav {
     width: 100vw;
     height: 10vh;
-    position: absolute;
     background-color: lightgray;
     display: flex;
     justify-content: space-around;
@@ -54,9 +53,16 @@ body {
     height: 96vh;
     background-color: grey;
     width: 100vw;
+    display: flex;
+    justify-content: center;
 }
 
-
+.main h1 {
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
 
 
 footer {
