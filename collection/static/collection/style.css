@@ -54,14 +54,66 @@ body {
     background-color: grey;
     width: 100vw;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
 }
 
 .main h1 {
+    margin : 1%;
     font-size: 40px;
     color: white;
     text-align: center;
     font-style: italic;
+    height: 10vh;
+    width: 100%;
+}
+
+
+.container {
+    margin: 1% 2%;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    height: 90%;
+}
+
+.example {
+    background-color: #111;
+    width: 400px;
+    height: 450px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.a .img {
+    background-image: url(https://m.media-amazon.com/images/I/51LaN4rhv8L._AC_UF894,1000_QL80_.jpg);
+    background-size: cover;
+    height: 230px;
+    width: 230px;
+}
+
+.b .img {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/e/e7/%22AM%22_%28Arctic_Monkeys%29.jpg);
+    background-size: cover;
+    height: 230px;
+    width: 230px;
+}
+
+.c .img {
+    background-image: url(https://tacohemingway.store/img/product_media/1-1000/1-800-OSWIECENIE-PREORDER-LTD-2008.jpg);
+    background-size: cover;
+    height: 230px;
+    width: 230px;
+}
+
+.d .img {
+    background-image: url(https://ecsmedia.pl/c/wojny-i-noce-b-iext122169916.jpg);
+    background-size: cover;
+    height: 230px;
+    width: 230px;
 }
 
 
