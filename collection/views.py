@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Plyta
+from .forms import PlytaForm
+
 
 def collection(request):
     nosniki = ['CD', 'Vinyl']  # Dostępne opcje nośnika
@@ -17,3 +19,17 @@ def collection(request):
     }
 
     return render(request, 'collection/collection.html', context)
+
+
+def dodaj_plyte(request):
+    if request.method == 'POST':
+        form = PlytaForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('collection')
+    else:
+        form = PlytaForm()
+    
+    context = {'form': form}
+    return render(request, 'collection/dodaj_plyte.html', context)
+ 

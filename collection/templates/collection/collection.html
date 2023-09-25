@@ -73,7 +73,10 @@
         {% empty %}
             <p>Brak płyt spełniających kryteria</p>
         {% endfor %}
+        <div class="add">
+        <a href="{% url 'dodaj_plyte' %}">Dodaj nową płytę</a>
         </div>
+    </div>
     </mains>
 
 
