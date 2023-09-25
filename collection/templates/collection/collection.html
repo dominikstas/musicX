@@ -9,6 +9,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+    .example {
+        background-color: #111;
+        width: 400px;
+        height: 450px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .example .img {
+        background-size: cover;
+        height: 230px;
+        width: 230px;
+    }
+</style>
 </head>
 <body>
     <section class="nav">
@@ -26,58 +45,34 @@
     
     <section class="main">
             <h1> Collection </h1>
-            <!--<div class="filtr">
-                <button>Filtr</button>
-                <div class="content">
-                     <a href="#">Vinyl</a>
-                    <a href="#">CD</a> 
-                </div>-->
+            <div class="button">
+                <form method="get">
+                    <label for="nosnik">Wybierz nośnik:</label>
+                    <select name="nosnik" id="nosnik">
+                        <option value="">Wszystkie</option>
+                        {% for nosnik in nosniki %}
+                            <option value="{{ nosnik }}" {% if nosnik == selected_nosnik %}selected{% endif %}>{{ nosnik }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit">Filtruj</button>
+                </form>
+            </div>
+
         <div class="container">
-
+    
+        {% for plyta in plyty %}
             <div class="example">
-                <div class="a">
-                    <div class="img">
-                    </div>
-                    <h2>Animals</h2>
-                    <h2>--Pink Floyd--</h2>
-                    <h3>Vinyl</h3>
-                    <h3>2023</h3>
+                <div class="id">
+                    <div class="img" style="background-image: url('{{ plyta.zdjecie }}');"></div>
+                    <h2>{{ plyta.tytul }}</h2>
+                    <h2>{{ plyta.artysta }}</h2>
+                    <h3>{{ plyta.nosnik }}</h3>
+                    <h3>{{ plyta.rok_zakupu }}</h3>
                 </div>
             </div>
-
-            <div class="example">
-                <div class="b">
-                    <div class="img">
-                    </div>
-                    <h2>AM</h2>
-                    <h2>--Arctic Monkeys--</h2>
-                    <h3>Vinyl</h3>
-                    <h3>2023</h3>
-                </div>
-            </div>
-
-            <div class="example">
-                <div class="c">
-                    <div class="img">
-                    </div>
-                    <h2>1-800-oświecenie</h2>
-                    <h2>--Taco Hemingway--</h2>
-                    <h3>CD</h3>
-                    <h3>2023</h3>
-                </div>
-            </div>
-
-
-            <div class="example">
-                <div class="d">
-                    <div class="img">
-                    </div>
-                    <h2>Wojny i noce</h2>
-                    <h2>--Daria Zawiałow--</h2>
-                    <h3>CD</h3>
-                    <h3>2021</h3>
-                </div>
-            </div>
+        {% empty %}
+            <p>Brak płyt spełniających kryteria</p>
+        {% endfor %}
         </div>
     </section>
 
@@ -88,4 +83,6 @@
     </footer>
 </body>
 </html>
-<script src="{% static '/collection/script.js' %}"></script>     
+<script src="{% static '/collection/script.js' %}"></script>    
+
+
