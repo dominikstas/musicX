@@ -5,8 +5,9 @@
 }
 
 body {
-    height: 100vh;
-}
+        min-height: 100vh;
+    }
+
 
 
 .nav {
@@ -50,7 +51,8 @@ body {
 }
 
 main {
-    height: 96vh;
+    position: absolute;
+    min-height: 100vh; 
     background-color: grey;
     width: 100vw;
     display: flex;
@@ -73,11 +75,13 @@ main h1 {
     display: inline-flex;
     flex-wrap: wrap;
     gap: 50px;
-    height: 90%;
+    flex-grow: 1; 
 }
 
 
 footer {
+    position: fixed;
+    bottom: 0;
     height: 4vh;
     width: 100vw;
     text-align: center;
@@ -87,3 +91,4 @@ footer {
     align-items: center;
     justify-content: center;
 }
+
