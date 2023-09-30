@@ -11,30 +11,34 @@ MusicX is a Django web application designed to help music enthusiasts (mainly me
 ## Usage
 
 Home Page:
-    - Browse the page
-    ![plot](https://github.com/dominikstas/musicX/blob/main/ss/add.png)
+- Browse the page
+
+    ![plot](https://github.com/dominikstas/musicX/blob/main/ss/index.png)
+
 Collection:
-    - Browse the list of albums.
-    - Use the filter dropdown to view CDs or Vinyl records.
+- Browse the list of albums.
+- Use the filter dropdown to view CDs or Vinyl records.
+
+    ![plot](https://github.com/dominikstas/musicX/blob/main/ss/collection.png)
 
 Add New Album:
-    - Click the button to add a new album.
-    - Fill in the details, including title, artist, media type, year of purchase, and cover image. Make sure
-    to insert valid link to image.
-    - Click "Add" to save or "Back" to cancel.
+- Click the button to add a new album.
+- Fill in the details, including title, artist, media type, year of purchase, and cover image. Make sure
+to insert valid link to image.
+- Click "Add" to save or "Back" to cancel.
 
+    ![plot](https://github.com/dominikstas/musicX/blob/main/ss/add.png)
 
 ## Technologies Used:
 
-    Django: A high-level Python web framework. The enginge that make the whole thing working. python is also the language in which website scripts are written
+Django: A high-level Python web framework. The enginge that make the whole thing working. python is also the language in which website scripts are written
 
-    SQLite: Simple database engine. I also manage my db files by db browser for sqlite3, to make it easy.
+SQLite: Simple database engine. I also manage my db files by db browser for sqlite3, to make it easy.
     
-    HTML, CSS: basic technologies for websites.
+HTML, CSS: basic technologies for websites.
 
 
 ## Coming soon:
-
-    - news site.
-    - logging as user.
-    - polish/english versions.
+- news site.
+- logging as user.
+- polish/english versions.
