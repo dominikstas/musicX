@@ -1,53 +1,35 @@
 * {
-    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
 body {
-    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
 }
-
 
 .nav {
-    width: 100vw;
-    height: 10vh;
-    position: absolute;
-    background-color: lightgray;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.space {
-    width: 75%;
-}
-
-.navButtons {
-    width: 25%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: lightgray;
-}
-
-.nav button {
-    font-family: 'Saira', sans-serif;
-    font-weight: 300;
-    line-height: 30px;
+    background-color: #333;
     color: white;
-    background-color: transparent;
-    cursor: pointer;
-    transition: .3s;
-    font-size: 20px;
-    border: 4px solid white;
-    min-width: 30%;
-    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
-    
-.nav button:hover {
-    background-color: #fff;
-    color: #111;
+
+.navButtons button {
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navButtons button:hover {
+    background-color: #777;
 }
 
 .main {
@@ -60,12 +42,11 @@ body {
 
 
 footer {
-    height: 4vh;
-    width: 100vw;
+    background-color: #333;
+    color: white;
     text-align: center;
-    color: whitesmoke;
-    background-color: lightslategray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
