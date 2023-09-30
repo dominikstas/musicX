@@ -12,8 +12,7 @@ MusicX is a Django web application designed to help music enthusiasts (mainly me
 
 Home Page:
     - Browse the page
-    !(/ss/index.png)
-
+    ![plot](https://github.com/dominikstas/musicX/blob/main/ss/add.png)
 Collection:
     - Browse the list of albums.
     - Use the filter dropdown to view CDs or Vinyl records.
