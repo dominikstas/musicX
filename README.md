@@ -42,3 +42,12 @@ HTML, CSS: basic technologies for websites.
 - news site.
 - logging as user.
 - polish/english versions.
+
+## Copyrights:
+All album covers used belong to their owners.
+The screenshots show:
+- The Dark Side of The Moon by Pink Floyds
+- Two versions of Wojny i noce by Daria Zawiałow.
+- Detox by Dżem
+- Scorpion by Drake
+- 1-800 oświecenie by Taco Hemingway
