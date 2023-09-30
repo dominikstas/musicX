@@ -30,14 +30,14 @@
             <h1> Collection </h1>
             <div class="button">
                 <form method="get">
-                    <label for="nosnik">Wybierz nośnik:</label>
+                    <label for="nosnik">Select:</label>
                     <select name="nosnik" id="nosnik">
-                        <option value="">Wszystkie</option>
+                        <option value="">All</option>
                         {% for nosnik in nosniki %}
                             <option value="{{ nosnik }}" {% if nosnik == selected_nosnik %}selected{% endif %}>{{ nosnik }}</option>
                         {% endfor %}
                     </select>
-                    <button type="submit">Filtruj</button>
+                    <button type="submit">Filter</button>
                 </form>
             </div>
 
@@ -54,10 +54,10 @@
                 </div>
             </div>
         {% empty %}
-            <p>Brak płyt spełniających kryteria</p>
+            <p>No records matching the criteria</p>
         {% endfor %}
         <div class="add">
-        <a href="{% url 'dodaj_plyte' %}">Dodaj nową płytę</a>
+        <a href="{% url 'dodaj_plyte' %}">Add new album</a>
         </div>
     </div>
     </main>

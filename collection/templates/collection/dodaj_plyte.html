@@ -9,11 +9,11 @@
 </head>
 <body>
     <main>
-    <h1>Dodaj nową płytę</h1>
+    <h1>Add new album</h1>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Dodaj płytę</button>
+        <button type="submit">Add</button>
     </form>
     <a href="/collection">Back</a>
     </main>
