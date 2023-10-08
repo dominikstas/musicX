@@ -159,9 +159,9 @@ footer {
     width: 100%;
 }
 
-/* 1280x720 (my second laptop */
+/* 1280x720 (my second laptop) */
 
-@media (min-width: 1080px) {
+@media (max-width: 1480px) {
    
 
     .container {
