@@ -34,6 +34,7 @@
                         <option value="">All</option>
                         {% for nosnik in nosniki %}
                             <option value="{{ nosnik }}" {% if nosnik == selected_nosnik %}selected{% endif %}>{{ nosnik }}</option>
+                            <
                         {% endfor %}
                     </select>
                     <button type="submit">Filter</button>
@@ -69,6 +70,6 @@
     </footer>
 </body>
 </html>
-<script src="{% static '/collection/script.js' %}"></script>    
+
 
 
