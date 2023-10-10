@@ -12,7 +12,5 @@ class Plyta(models.Model):
     rok_zakupu = models.IntegerField()
     zdjecie = models.CharField(max_length=1000)
 
-    # inne pola modelu
-
     def __str__(self):
         return self.tytul

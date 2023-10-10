@@ -27,10 +27,28 @@
     
     <main>
         <h1>News</h1>
-    </main>
-        <div class="container">
-
+    
+    <h2>Ordered preorders<h2>
+    {% for preorder in preordery %}
+    <div class="album">
+        <div class="id">
+            <div class="img" style="background-image: url('{{ plyta.zdjecie }}');"></div>
+            <h2>{{ plyta.tytul }}
+            </h2>
+            <h2>{{ plyta.artysta }}</h2>
+            <h3>{{ plyta.nosnik }}</h3>
+            <h3>{{ plyta.data }}</h3>
         </div>
+    </div>
+{% empty %}
+    <p>There is no ordered preorders</p>
+
+
+    <div class="add">
+        <a href="{% url 'add_preorder' %}">Add preorder</a>
+        </div>
+{% endfor %}
+</main>
     <footer>
         <p>Dominik Stasiak MusicX 2023</p>
     </footer>
