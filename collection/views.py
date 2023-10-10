@@ -20,7 +20,6 @@ def collection(request):
 
     return render(request, 'collection/collection.html', context)
 
-
 def dodaj_plyte(request):
     if request.method == 'POST':
         form = PlytaForm(request.POST, request.FILES)
