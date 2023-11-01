@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'collection/style.css' now "U" %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="nav">
+        <div class="space">
+        </div>
+        <div class = "navButtons">
+        <button onClick="window.location.href='/';">
+            Główna
+        </button>
+        <button onClick="window.location.href='/news';">
+            Nowości
+        </button>
+    </div>
+    </section>
+    
+    <main>
+        <h1>Kolekcja  - {{ plyty|length }} płyt</h1>
+    
+            <div class="button">
+                <form method="get">
+                    <label for="nosnik">Wybier:</label>
+                    <select name="nosnik" id="nosnik">
+                        <option value="">Wszystkies</option>
+                        {% for nosnik in nosniki %}
+                            <option value="{{ nosnik }}" {% if nosnik == selected_nosnik %}selected{% endif %}>{{ nosnik }}</option>
+                        {% endfor %}
+                    </select>
+                    <button type="submit">Filtruj</button>
+                </form>
+            </div>
+
+        <div class="container">
+    
+        {% for plyta in plyty %}
+            <div class="album">
+                <div class="id">
+                    <div class="img" style="background-image: url('{{ plyta.zdjecie }}');"></div>
+                    <h2>{{ plyta.tytul }}
+                    </h2>
+                    <h2>{{ plyta.artysta }}</h2>
+                    <h3>{{ plyta.nosnik }}</h3>
+                    <h3>{{ plyta.rok_zakupu }}</h3>
+                </div>
+            </div>
+        {% empty %}
+            <p>Brak płyt pasujących do podanych kryteriów</p>
+        {% endfor %}
+        <div class="add">
+        <a href="{% url 'dodaj_plyte' %}">Dodaj album</a>
+        </div>
+    </div>
+    </main>
+
+
+
+    <footer>
+        <p>Dominik Stasiak MusicX 2023</p>
+    </footer>
+</body>
+</html>
+<script src="{% static '/collection/script.js' %}"></script>    
+
+
