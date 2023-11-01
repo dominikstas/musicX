@@ -29,6 +29,10 @@ to insert valid link to image.
 
     ![plot](https://github.com/dominikstas/musicX/blob/main/ss/add.png)
 
+News Page:
+- Click the button to add preorder;
+- The form is pretty much the same as the add album
+
 ## Technologies Used:
 
 Django: A high-level Python web framework. The enginge that make the whole thing working. python is also the language in which website scripts are written
@@ -39,7 +43,8 @@ HTML, CSS: basic technologies for websites.
 
 
 ## Coming soon:
-- news site.
+- actually working preorder feature - the day i (should) get the album, it would automatically delete
+itself from the preorder database, and appear in the collection.
 - logging as user.
 - polish/english versions.
 
